@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoveAlong Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="text-container">
+        <span id="move">Move</span><span id="along">Along</span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.text-container {
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); /* Outline effect */
+}
+
+#move {
+    color: red;
+    animation: colorChangeRed 2s infinite; /* Animation for Move */
+}
+
+#along {
+    color: blue;
+    animation: colorChangeBlue 2s infinite; /* Animation for Along */
+}
+
+@keyframes colorChangeRed {
+    0%, 100% {
+        color: red;
+    }
+    50% {
+        color: darkred; /* Transition to darker red */
+    }
+}
+
+@keyframes colorChangeBlue {
+    0%, 100% {
+        color: blue;
+    }
+    50% {
+        color: darkblue; /* Transition to darker blue */
+    }
+}
+
+// script.js
+// If you want to add interactivity, you can use the following code
+document.addEventListener('DOMContentLoaded', () => {
+    const moveElement = document.getElementById('move');
+    const alongElement = document.getElementById('along');
+
+    // You can add any event listeners or interactivity here
+});
